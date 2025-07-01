@@ -1,0 +1,44 @@
+# Security Rules
+
+## 1. General Principles
+- Always validate and sanitize user input (frontend and backend).
+- Never trust data from the client.
+- Use HTTPS in all environments (especially production).
+- Keep all dependencies up to date.
+
+## 2. Frontend Security
+- Escape all user-generated content before rendering.
+- Use Content Security Policy (CSP) headers where possible.
+- Avoid exposing sensitive data or API keys in frontend code.
+- Use secure cookies (HttpOnly, Secure, SameSite) for auth tokens.
+- Implement CSRF protection for all forms and API requests.
+- Use strong password policies and client-side validation.
+
+## 3. Backend Security
+- Validate and sanitize all incoming data on the server.
+- Use parameterized queries or ORM to prevent SQL injection.
+- Hash passwords with bcrypt or Argon2 (never store plain-text passwords).
+- Implement rate limiting and brute-force protection.
+- Use environment variables for secrets and never commit them to version control.
+- Implement proper error handling (never leak stack traces or sensitive info).
+- Use CORS to restrict API access to trusted domains.
+- Log security events and monitor for suspicious activity.
+
+## 4. Authentication & Authorization
+- Use JWT, OAuth, or session-based authentication.
+- Implement role-based access control (RBAC) for sensitive actions.
+- Require re-authentication for critical operations.
+- Invalidate tokens/sessions on logout or password change.
+
+## 5. Dependency & Infrastructure Security
+- Regularly audit dependencies for vulnerabilities (npm audit, Snyk, etc.).
+- Keep server OS and software up to date.
+- Use firewalls and restrict open ports.
+- Back up data regularly and test restore procedures.
+
+## 6. When Making Changes
+- Review all code for security implications.
+- Test for common vulnerabilities (XSS, CSRF, SQLi, etc.).
+- Use automated security scanning tools in CI/CD.
+
+_Remember: Security is everyone's responsibility!_ 

@@ -1,0 +1,96 @@
+import { ArrowRight } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
+interface Hero1Props {
+  badge?: string;
+  heading: string;
+  description: string;
+  buttons?: {
+    primary?: {
+      text: string;
+      url: string;
+    };
+    secondary?: {
+      text: string;
+      url: string;
+    };
+  };
+  video?: {
+    youtubeId: string;
+    title: string;
+  };
+}
+
+const Hero = ({
+  badge = "✨ Bem-vindo ao mundo da impressão 3D",
+  heading = "Build Beautiful Apps with Shadcn & Tailwind",
+  description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project to create stunning applications.",
+  buttons = {
+    primary: {
+      text: "Get Started",
+      url: "#",
+    },
+    secondary: {
+      text: "View Documentation",
+      url: "#",
+    },
+  },
+  video = {
+    youtubeId: "MAFuVi_Zgyw",
+    title: "YouTube video player",
+  },
+}: Hero1Props) => {
+  return (
+    <section className="py-32 bg-gradient-to-b from-background to-muted/20">
+      <div className="container">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            {badge && (
+              <Badge variant="outline" className="mb-6 animate-fade-in">
+                {badge}
+              </Badge>
+            )}
+            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent animate-slide-in-left">
+              {heading}
+            </h1>
+            <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              {description}
+            </p>
+            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start animate-scale-in" style={{animationDelay: '0.4s'}}>
+              {buttons.primary && (
+                <Button asChild className="w-full sm:w-auto hover-scale">
+                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
+                </Button>
+              )}
+              {buttons.secondary && (
+                <Button asChild variant="outline" className="w-full sm:w-auto hover-scale">
+                  <a href={buttons.secondary.url}>
+                    {buttons.secondary.text}
+                    <ArrowRight className="size-4 ml-2" />
+                  </a>
+                </Button>
+              )}
+            </div>
+          </div>
+          <div className="animate-slide-in-right" style={{animationDelay: '0.3s'}}>
+            <div className="relative w-full max-w-2xl mx-auto">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export { Hero };

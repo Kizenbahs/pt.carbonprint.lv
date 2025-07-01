@@ -1,0 +1,68 @@
+# Frontend Development Rules
+
+## 1. Project Goals
+- Build a performant, accessible, and responsive web application.
+- Prioritize user experience, SEO, and maintainability.
+
+## 2. Tech Stack
+- React (with Next.js or Vite)
+- TypeScript
+- Tailwind CSS (or your chosen CSS framework)
+- shadcn/ui or other component libraries
+
+## 3. File & Folder Structure
+- Use kebab-case for files and folders.
+- Organize by feature/domain (`/features/gallery`, `/features/auth`).
+- Co-locate styles, tests, and components.
+
+## 4. Coding Standards
+- Use functional components and React Hooks.
+- Type all props and state with TypeScript.
+- Prefer composition over inheritance.
+- Use custom hooks for reusable logic.
+- Follow DRY and separation of concerns.
+
+## 5. Styling
+- Use Tailwind utility classes for layout and design.
+- Avoid inline styles except for dynamic values.
+- Ensure color contrast meets WCAG standards.
+- Use BEM or another naming convention if writing custom CSS.
+
+## 6. Responsiveness & Accessibility
+- Mobile-first design: test all breakpoints.
+- All interactive elements must be keyboard accessible.
+- Use semantic HTML and ARIA roles.
+- Provide alt text for all images.
+
+## 7. State Management
+- Use Context API or Zustand for global state.
+- Avoid prop drilling; use hooks for shared logic.
+
+## 8. API Integration
+- Use SWR or React Query for data fetching.
+- Handle loading, error, and empty states gracefully.
+- Validate and sanitize all user input.
+
+## 9. SEO & Performance
+- Use `next/head` for meta tags (if Next.js).
+- Optimize images with `next/image` or similar.
+- Implement lazy loading for images and components.
+- Minimize bundle size and use dynamic imports.
+
+## 10. Testing & Quality
+- Write unit tests for all components (Jest + Testing Library).
+- Use ESLint and Prettier for code quality.
+- Run tests and lints on every PR.
+
+## 11. Git & Workflow
+- Use feature branches and clear commit messages.
+- Open PRs for all changes; require code review.
+- Keep PRs focused and atomic.
+
+## 12. When Making Changes
+- Only modify what is explicitly requested.
+- Maintain existing functionality unless change is approved.
+- Test across mobile, tablet, and desktop.
+- Check for accessibility regressions.
+
+_Remember: Prioritize UX, accessibility, and maintainability at every step!_ 

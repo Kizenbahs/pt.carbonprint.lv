@@ -1,0 +1,64 @@
+# Backend Development Rules
+
+## 1. Project Goals
+- Build a secure, scalable, and maintainable backend.
+- Prioritize API performance, reliability, and security.
+
+## 2. Tech Stack
+- Node.js (Express, Fastify, or Koa)
+- TypeScript (if possible)
+- PostgreSQL, MySQL, or SQLite for database
+- REST or GraphQL APIs
+
+## 3. File & Folder Structure
+- Use kebab-case for files and folders.
+- Organize by feature/domain (`/features/auth`, `/features/products`).
+- Separate routes, controllers, services, and models.
+- Store environment configs in `.env` files (never commit secrets).
+
+## 4. Coding Standards
+- Use async/await for asynchronous code.
+- Type all data models and API responses.
+- Use dependency injection where possible.
+- Follow DRY and separation of concerns.
+
+## 5. API Design
+- Use RESTful conventions or GraphQL best practices.
+- Version APIs (e.g., `/api/v1/`).
+- Validate and sanitize all incoming data.
+- Handle errors with consistent error responses.
+- Document APIs with Swagger/OpenAPI or GraphQL SDL.
+
+## 6. Database
+- Use migrations for schema changes.
+- Use parameterized queries or ORM to prevent SQL injection.
+- Index frequently queried fields.
+- Regularly back up the database.
+
+## 7. Authentication & Authorization
+- Use JWT, OAuth, or session-based auth.
+- Implement role-based access control (RBAC).
+- Never store plain-text passwords (always hash).
+
+## 8. Performance & Monitoring
+- Use caching for frequently accessed data.
+- Log all errors and important events.
+- Monitor performance and uptime (e.g., with PM2, New Relic).
+- Gracefully handle server restarts and crashes.
+
+## 9. Testing & Quality
+- Write unit and integration tests for all endpoints.
+- Use ESLint and Prettier for code quality.
+- Run tests and lints on every PR.
+
+## 10. Git & Workflow
+- Use feature branches and clear commit messages.
+- Open PRs for all changes; require code review.
+- Keep PRs focused and atomic.
+
+## 11. When Making Changes
+- Only modify what is explicitly requested.
+- Maintain existing functionality unless change is approved.
+- Test all endpoints after changes.
+
+_Remember: Prioritize security, reliability, and maintainability at every step!_ 

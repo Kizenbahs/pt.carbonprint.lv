@@ -1,0 +1,75 @@
+# Design Rules
+
+## 0. Consistency Across All Pages
+- All pages must follow these design rules.
+- Layouts, spacing, and component usage must be consistent across all pages.
+- Reuse design patterns and components to ensure a unified look and feel.
+- Any new page or feature should match the established design system and visual language.
+
+## 1. Color Palette
+- Use the official brand colors for primary, secondary, and accent elements.
+- Ensure sufficient contrast between text and background (WCAG AA minimum).
+- Use neutral colors for backgrounds and surfaces.
+- Document all color hex codes and usage examples.
+
+## 2. Typography
+- Use the approved font family (e.g., Inter, Roboto, or system font stack).
+- Define font sizes, weights, and line heights for headings, body, captions, etc.
+- Maintain consistent vertical rhythm and spacing.
+- Avoid using more than two font families.
+
+## 3. Spacing & Layout
+- Use a consistent spacing scale (e.g., 4px, 8px, 16px, 24px, 32px).
+- Apply spacing tokens via CSS variables or utility classes.
+- Use a 12-column grid for desktop layouts; stack columns on mobile.
+- Maintain consistent gutters and margins between elements.
+
+## 4. Components
+- Follow atomic/component-driven design (buttons, cards, forms, etc.).
+- Use reusable components for common UI patterns.
+- Document component states: default, hover, active, disabled, focus.
+- Ensure all components are accessible (keyboard, screen reader, etc.).
+
+## 5. Iconography
+- Use a consistent icon set (e.g., Heroicons, Material Icons).
+- Match icon stroke width and size across the UI.
+- Use SVGs for scalability and accessibility.
+- Provide alt text or aria-labels for meaningful icons.
+
+## 6. Imagery
+- Use high-quality, optimized images (JPG, PNG, or WebP).
+- Maintain consistent aspect ratios for images in galleries or cards.
+- Use descriptive alt text for all images.
+- Avoid using text in images unless necessary.
+
+## 7. Accessibility
+- Ensure color contrast meets WCAG AA standards.
+- Provide visible focus indicators for all interactive elements.
+- Use semantic HTML for structure and meaning.
+- Test designs with screen readers and keyboard navigation.
+
+## 8. Responsive Design
+- Design for mobile first, then scale up to tablet and desktop.
+- Define breakpoints (e.g., 640px, 768px, 1024px, 1280px).
+- Ensure layouts adapt gracefully to all screen sizes.
+- Avoid fixed widths; use relative units (%, rem, em) where possible.
+
+## 9. Brand Assets
+- Use the official logo and brand assets as provided.
+- Maintain clear space around the logo.
+- Do not alter logo colors, proportions, or orientation.
+- Store all brand assets in a central location (e.g., /public/brand/).
+
+## 10. Animation & Motion
+- Use subtle, purposeful animations to enhance UX (e.g., button hover, modal open).
+- Keep animation durations short (100–300ms).
+- Use CSS transitions or keyframes for smooth effects.
+- Avoid excessive or distracting motion.
+- Provide reduced motion options for accessibility.
+- For advanced UI/UX, use Framer Motion or a similar animation library:
+  - Prefer declarative animation APIs for maintainability.
+  - Use spring and easing curves for natural movement.
+  - Animate presence and transitions for modals, tooltips, and page changes.
+  - Test animations for performance and accessibility (respects prefers-reduced-motion).
+
+_Remember: Consistency and accessibility are key to great design!_ 
