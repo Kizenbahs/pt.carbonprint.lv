@@ -67,7 +67,7 @@ const Navbar = () => {
       <div className="container">
         <nav className="flex items-center justify-between">
           <a
-            href="https://www.shadcnblocks.com"
+            href="https://pt.carbonprint.lv/"
             className="flex items-center gap-2"
           >
             <img
@@ -153,7 +153,7 @@ const Navbar = () => {
               <SheetHeader>
                 <SheetTitle>
                   <a
-                    href="https://www.shadcnblocks.com"
+                    href="https://pt.carbonprint.lv/"
                     className="flex items-center gap-2"
                   >
                     <img

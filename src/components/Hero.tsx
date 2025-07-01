@@ -76,7 +76,7 @@ const Hero = ({
           </div>
           <div className="animate-slide-in-right" style={{animationDelay: '0.3s'}}>
             <div className="relative w-full max-w-2xl mx-auto">
-              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
+              <div className="aspect-video rounded-xl overflow-hidden border-2 border-gray-300 bg-black">
                 <iframe
                   src={`https://www.youtube.com/embed/${video.youtubeId}`}
                   title={video.title}
