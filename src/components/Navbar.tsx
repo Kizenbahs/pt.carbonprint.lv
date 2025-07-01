@@ -76,7 +76,7 @@ const Navbar = () => {
               alt="Shadcn UI Navbar"
             />
             <span className="text-lg font-semibold tracking-tighter">
-              carbonprint.lv
+              carbonprint
             </span>
           </a>
           <NavigationMenu className="hidden lg:block">
@@ -139,7 +139,7 @@ const Navbar = () => {
                       alt="Shadcn UI Navbar"
                     />
                     <span className="text-lg font-semibold tracking-tighter">
-                      carbonprint.lv
+                      carbonprint
                     </span>
                   </a>
                 </SheetTitle>

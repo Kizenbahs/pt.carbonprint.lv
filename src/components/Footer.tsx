@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 interface Footer7Props {
   logo?: {
@@ -56,35 +56,35 @@ const defaultSections = [
 ];
 
 const defaultSocialLinks = [
-  { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
-  { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
+  { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/carbonprintpro/", label: "Instagram" },
+  { icon: <FaFacebook className="size-5" />, href: "https://www.facebook.com/krkpkp", label: "Facebook" },
+  { icon: <FaYoutube className="size-5" />, href: "https://www.youtube.com/@CarbonPrintLV", label: "YouTube" },
+  { icon: <FaWhatsapp className="size-5" />, href: "https://wa.me/37126236432", label: "WhatsApp" },
 ];
 
 const defaultLegalLinks = [
-  { name: "Terms and Conditions", href: "#" },
-  { name: "Privacy Policy", href: "#" },
 ];
 
 const Footer = ({
   logo = {
     url: "#",
     src: "/img/3d-print-logo.png",
-    alt: "carbonprint.lv logo",
-    title: "carbonprint.lv",
+    alt: "carbonprint logo",
+    title: "carbonprint",
   },
   sections = defaultSections,
   description = "Somos especialistas em Impressão 3D e Design de Alta Performance.",
   socialLinks = defaultSocialLinks,
-  copyright = `© ${new Date().getFullYear()} carbonprint.lv. All rights reserved.`,
+  copyright = `© ${new Date().getFullYear()} carbonprint. All rights reserved.`,
   legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
   return (
-    <section className="py-32 dark:bg-gray-800">
+    <section className="py-16 dark:bg-gray-800">
       <div className="container">
-        <div className="flex w-full flex-col items-center text-center gap-10">
-          <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
+        <div className="flex w-full flex-col items-center text-center gap-6">
+          <div className="flex w-full flex-col items-center gap-4">
             {/* Logo */}
-            <div className="flex items-center gap-2 lg:justify-start">
+            <div className="flex items-center gap-2">
               <a href={logo.url}>
                 <img
                   src={logo.src}
@@ -95,13 +95,13 @@ const Footer = ({
               </a>
               <h2 className="text-xl font-semibold">{logo.title}</h2>
             </div>
-            <p className="text-muted-foreground max-w-[70%] text-sm">
+            <p className="text-muted-foreground max-w-[70%] text-xs text-center">
               {description}
             </p>
             <ul className="text-muted-foreground flex items-center justify-center space-x-6">
               {socialLinks.map((social, idx) => (
                 <li key={idx} className="hover:text-primary font-medium">
-                  <a href={social.href} aria-label={social.label}>
+                  <a href={social.href} aria-label={social.label} target="_blank" rel="noopener noreferrer">
                     {social.icon}
                   </a>
                 </li>
@@ -109,7 +109,7 @@ const Footer = ({
             </ul>
           </div>
         </div>
-        <div className="text-muted-foreground mt-8 flex flex-col items-center text-center gap-4 border-t py-8 text-xs font-medium">
+        <div className="text-muted-foreground mt-6 flex flex-col items-center text-center gap-3 border-t py-6 text-xs font-medium">
           <p className="order-2 lg:order-1">{copyright}</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
