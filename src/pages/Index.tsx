@@ -16,7 +16,7 @@ const Index = () => {
         buttons={{
           primary: {
             text: "Contacte-nos",
-            url: "#features"
+            url: "#contact"
           },
           secondary: {
             text: "Pedir orçamento",

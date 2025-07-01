@@ -36,7 +36,7 @@ const Contact = ({
   };
 
   return (
-    <section className="py-32">
+    <section id="contact" className="py-32">
       <div className="container w-full">
         <div className="flex w-full flex-col justify-between gap-6 lg:flex-row lg:gap-12">
           <div className="flex w-full flex-col justify-between gap-4">

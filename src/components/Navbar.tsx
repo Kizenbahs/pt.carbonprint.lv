@@ -2,6 +2,7 @@
 
 import { MenuIcon, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { useEffect } from "react";
 
 import {
   Accordion,
@@ -29,6 +30,29 @@ import {
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    const handleSmoothScroll = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest('a');
+      
+      if (link && link.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href')?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleSmoothScroll);
+    return () => document.removeEventListener('click', handleSmoothScroll);
+  }, []);
   const features = [
     {
       title: "Dashboard",
@@ -92,7 +116,7 @@ const Navbar = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="#faq"
                   className={navigationMenuTriggerStyle()}
                 >
                   Porquê nós?
@@ -100,7 +124,7 @@ const Navbar = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="#contact"
                   className={navigationMenuTriggerStyle()}
                 >
                   Contactos
@@ -134,9 +158,9 @@ const Navbar = () => {
                     className="flex items-center gap-2"
                   >
                     <img
-                      src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
+                      src="/img/3d-print-logo.png"
                       className="max-h-8"
-                      alt="Shadcn UI Navbar"
+                      alt="carbonprint logo"
                     />
                     <span className="text-lg font-semibold tracking-tighter">
                       carbonprint
@@ -145,42 +169,20 @@ const Navbar = () => {
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col p-4">
-                <Accordion type="single" collapsible className="mt-4 mb-2">
-                  <AccordionItem value="solutions" className="border-none">
-                    <AccordionTrigger className="text-base hover:no-underline">
-                      Features
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="grid md:grid-cols-2">
-                        {features.map((feature, index) => (
-                          <a
-                            href={feature.href}
-                            key={index}
-                            className="rounded-md p-3 transition-colors hover:bg-muted/70"
-                          >
-                            <div key={feature.title}>
-                              <p className="mb-1 font-semibold text-foreground">
-                                {feature.title}
-                              </p>
-                              <p className="text-sm text-muted-foreground">
-                                {feature.description}
-                              </p>
-                            </div>
-                          </a>
-                        ))}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
                 <div className="flex flex-col gap-6">
-                  <a href="#" className="font-medium">
-                    Templates
+                  <a 
+                    href="https://www.etsy.com/shop/CarbonPrintLV" 
+                    className="font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Loja
                   </a>
-                  <a href="#" className="font-medium">
-                    Blog
+                  <a href="#faq" className="font-medium">
+                    Porquê nós?
                   </a>
-                  <a href="#" className="font-medium">
-                    Pricing
+                  <a href="#contact" className="font-medium">
+                    Contactos
                   </a>
                 </div>
                 <div className="mt-6 flex flex-col gap-4">

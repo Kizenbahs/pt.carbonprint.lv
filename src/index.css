@@ -95,6 +95,22 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced smooth scrolling for anchor links */
+  a[href^="#"] {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure smooth scrolling works on all browsers */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 /* Removed rotate-shadow animation, no longer used */
