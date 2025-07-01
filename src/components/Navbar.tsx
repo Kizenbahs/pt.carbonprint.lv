@@ -82,34 +82,12 @@ const Navbar = () => {
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Features</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[600px] grid-cols-2 p-3">
-                    {features.map((feature, index) => (
-                      <NavigationMenuLink
-                        href={feature.href}
-                        key={index}
-                        className="rounded-md p-3 transition-colors hover:bg-muted/70"
-                      >
-                        <div key={feature.title}>
-                          <p className="mb-1 font-semibold text-foreground">
-                            {feature.title}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {feature.description}
-                          </p>
-                        </div>
-                      </NavigationMenuLink>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="https://www.etsy.com/shop/CarbonPrintLV"
                   className={navigationMenuTriggerStyle()}
+                  target="_blank"
                 >
-                  Products
+                  Loja
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -117,7 +95,7 @@ const Navbar = () => {
                   href="#"
                   className={navigationMenuTriggerStyle()}
                 >
-                  Resources
+                  Porquê nós?
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -125,13 +103,12 @@ const Navbar = () => {
                   href="#"
                   className={navigationMenuTriggerStyle()}
                 >
-                  Contact
+                  Contactos
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
           <div className="hidden items-center gap-4 lg:flex">
-            <Button className="bg-[#f3b112] hover:bg-[#e0a20f] text-black border-none">Start for free</Button>
             <Button
               variant="outline"
               size="icon"
@@ -207,7 +184,6 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className="mt-6 flex flex-col gap-4">
-                  <Button className="bg-[#f3b112] hover:bg-[#e0a20f] text-black border-none">Start for free</Button>
                   <Button
                     variant="outline"
                     size="icon"

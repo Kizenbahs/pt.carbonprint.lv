@@ -21,6 +21,7 @@ interface Hero1Props {
     youtubeId: string;
     title: string;
   };
+  primaryButtonClassName?: string;
 }
 
 const Hero = ({
@@ -29,7 +30,7 @@ const Hero = ({
   description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project to create stunning applications.",
   buttons = {
     primary: {
-      text: "Get Started",
+      text: "Contacte-nos",
       url: "#",
     },
     secondary: {
@@ -41,6 +42,7 @@ const Hero = ({
     youtubeId: "MAFuVi_Zgyw",
     title: "YouTube video player",
   },
+  primaryButtonClassName,
 }: Hero1Props) => {
   return (
     <section className="py-32 bg-gradient-to-b from-background to-muted/20">
@@ -60,7 +62,7 @@ const Hero = ({
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start animate-scale-in" style={{animationDelay: '0.4s'}}>
               {buttons.primary && (
-                <Button asChild className="w-full sm:w-auto hover-scale">
+                <Button asChild className={`w-full sm:w-auto hover-scale ${primaryButtonClassName || ''}`}>
                   <a href={buttons.primary.url}>{buttons.primary.text}</a>
                 </Button>
               )}

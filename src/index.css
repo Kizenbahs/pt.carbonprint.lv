@@ -98,3 +98,5 @@ All colors MUST be HSL.
 }
 
 /* Removed rotate-shadow animation, no longer used */
+
+/* Removed .hero-glow-text class, rolling back effect */

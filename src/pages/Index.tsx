@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Feature } from "@/components/Feature";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
+import { Contact } from "@/components/Contact";
 
 const Index = () => {
   return (
@@ -14,11 +15,11 @@ const Index = () => {
         description="Impressão em nylon de carbono e serviços personalizados de design 3D para profissionais, entusiastas e empresas"
         buttons={{
           primary: {
-            text: "Get Started",
+            text: "Contacte-nos",
             url: "#features"
           },
           secondary: {
-            text: "View Documentation",
+            text: "Pedir orçamento",
             url: "#faq"
           }
         }}
@@ -26,22 +27,19 @@ const Index = () => {
           youtubeId: "MAFuVi_Zgyw",
           title: "YouTube video player"
         }}
+        primaryButtonClassName="bg-[#f3b112] hover:bg-[#e0a20f] text-black border-none"
       />
-      <div id="features">
-        <Feature 
-          heading="Why Choose Our Components?"
-        />
-      </div>
       <div id="faq">
         <Faq 
           heading="Perguntas Frequentes"
-          description="Encontre respostas para perguntas comuns sobre impressão 3D e os nossos serviços.\nNão encontrou o que procura? Contacte a nossa equipa de apoio."
+          description="Encontre respostas para perguntas comuns sobre impressão 3D e os nossos serviços. Não encontrou o que procura? Contacte a nossa equipa de apoio."
           supportHeading="Need personalized help?"
           supportDescription="Our experienced developers are here to help you implement these components successfully in your projects."
           supportButtonText="Get Support"
           supportButtonUrl="#"
         />
       </div>
+      <Contact />
       <Footer />
     </div>
   );
