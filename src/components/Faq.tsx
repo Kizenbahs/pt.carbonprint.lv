@@ -26,60 +26,60 @@ interface Faq3Props {
 const faqItems = [
   {
     id: "faq-1",
-    question: "How do I integrate these components into my project?",
+    question: "What is the return policy?",
     answer:
-      "Simply copy the component code and paste it into your React project. Make sure you have Tailwind CSS and Shadcn UI properly configured.",
+      "You can return any item within 30 days of purchase for a full refund, provided it is in its original condition.",
   },
   {
     id: "faq-2",
-    question: "Are these components compatible with Next.js?",
+    question: "How do I track my order?",
     answer:
-      "Yes! All components are built with React and are fully compatible with Next.js, Vite, and other React frameworks.",
+      "Once your order is shipped, you will receive an email with a tracking number. You can use this number on our website to track your order.",
   },
   {
     id: "faq-3",
-    question: "Do you provide TypeScript support?",
+    question: "Do you offer international shipping?",
     answer:
-      "Absolutely! All components are written in TypeScript with full type definitions for better development experience.",
+      "Yes, we ship to most countries worldwide. Shipping costs and delivery times vary depending on the destination.",
   },
   {
     id: "faq-4",
-    question: "Can I customize the styling of these components?",
+    question: "Can I change my order after it has been placed?",
     answer:
-      "Yes, you can easily customize the styling using Tailwind CSS classes or by modifying the component code directly.",
+      "You can change your order within 24 hours of placing it by contacting our customer service team.",
   },
   {
     id: "faq-5",
-    question: "What's included in the component library?",
-    answer: "We include navigation, hero sections, features, FAQs, forms, cards, and many more essential UI components.",
+    question: "What payment methods do you accept?",
+    answer: "We accept all major credit cards, PayPal, and Apple Pay.",
   },
   {
     id: "faq-6",
-    question: "Is there documentation available?",
+    question: "How can I contact customer support?",
     answer:
-      "Yes, comprehensive documentation is provided with examples, props documentation, and implementation guides for each component.",
+      "You can reach our customer support team via email at support@example.com or by calling 1-800-123-4567.",
   },
   {
     id: "faq-7",
-    question: "Do you offer updates and new components?",
+    question: "Are there any discounts for bulk purchases?",
     answer:
-      "We regularly update existing components and add new ones based on community feedback and modern design trends.",
+      "Yes, we offer discounts for bulk purchases. Please contact our sales team for more information.",
   },
 ];
 
 const Faq = ({
-  heading = "Frequently Asked Questions",
-  description = "Find answers to common questions about our React components. Can't find what you're looking for? Contact our support team.",
+  heading = "Frequently asked questions",
+  description = "Find answers to common questions about our products. Can't find what you're looking for? Contact our support team.",
   items = faqItems,
-  supportHeading = "Need personalized help?",
-  supportDescription = "Our experienced developers are here to help you implement these components successfully in your projects.",
-  supportButtonText = "Get Support",
-  supportButtonUrl = "#",
+  supportHeading = "Need more support?",
+  supportDescription = "Our dedicated support team is here to help you with any questions or concerns. Get in touch with us for personalized assistance.",
+  supportButtonText = "Contact Support",
+  supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
     <section className="py-32">
       <div className="container space-y-16">
-        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center animate-fade-in">
+        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             {heading}
           </h2>
@@ -88,13 +88,12 @@ const Faq = ({
         <Accordion
           type="single"
           collapsible
-          className="mx-auto w-full lg:max-w-3xl animate-fade-in-up"
-          style={{ animationDelay: '0.2s' }}
+          className="mx-auto w-full lg:max-w-3xl"
         >
           {items.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
-              <AccordionTrigger className="transition-all duration-200 hover:no-underline hover:opacity-60">
-                <div className="font-medium sm:py-1 lg:py-2 lg:text-lg text-left">
+              <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60">
+                <div className="font-medium sm:py-1 lg:py-2 lg:text-lg">
                   {item.question}
                 </div>
               </AccordionTrigger>
@@ -106,19 +105,19 @@ const Faq = ({
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="mx-auto flex max-w-4xl flex-col items-center rounded-xl bg-gradient-to-r from-accent to-accent/70 p-4 text-center md:p-6 lg:p-8 animate-scale-in shadow-lg" style={{ animationDelay: '0.4s' }}>
+        <div className="mx-auto flex max-w-4xl flex-col items-center rounded-lg bg-accent p-4 text-center md:rounded-xl md:p-6 lg:p-8">
           <div className="relative">
-            <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border-2 border-background md:mb-5">
-              <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" />
-              <AvatarFallback>JS</AvatarFallback>
+            <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border md:mb-5">
+              <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp" />
+              <AvatarFallback>SU</AvatarFallback>
             </Avatar>
-            <Avatar className="absolute mb-4 size-16 origin-bottom translate-x-[60%] scale-[80%] border-2 border-background md:mb-5">
-              <AvatarImage src="https://images.unsplash.com/photo-1494790108755-2616b612b5c3?w=400&h=400&fit=crop&crop=face" />
-              <AvatarFallback>MJ</AvatarFallback>
+            <Avatar className="absolute mb-4 size-16 origin-bottom translate-x-[60%] scale-[80%] border md:mb-5">
+              <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp" />
+              <AvatarFallback>SU</AvatarFallback>
             </Avatar>
-            <Avatar className="mb-4 size-16 border-2 border-background md:mb-5">
-              <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" />
-              <AvatarFallback>AS</AvatarFallback>
+            <Avatar className="mb-4 size-16 border md:mb-5">
+              <AvatarImage src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp" />
+              <AvatarFallback>SU</AvatarFallback>
             </Avatar>
           </div>
           <h3 className="mb-2 max-w-3xl font-semibold lg:text-lg">
@@ -128,8 +127,8 @@ const Faq = ({
             {supportDescription}
           </p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
-            <Button className="w-full sm:w-auto hover-scale" asChild>
-              <a href={supportButtonUrl}>
+            <Button className="w-full sm:w-auto" asChild>
+              <a href={supportButtonUrl} target="_blank">
                 {supportButtonText}
               </a>
             </Button>
