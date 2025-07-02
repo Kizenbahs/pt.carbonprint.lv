@@ -26,9 +26,9 @@ interface Faq3Props {
 const faqItems = [
   {
     id: "faq-1",
-    question: "What is the return policy?",
+    question: "Do you print custom products?",
     answer:
-      "You can return any item within 30 days of purchase for a full refund, provided it is in its original condition.",
+      "Yes, we specialize in custom 3D printing! We can print your own designs or help you create custom products from scratch. Just send us your idea or design file and we'll work with you to bring it to life.",
   },
   {
     id: "faq-2",
