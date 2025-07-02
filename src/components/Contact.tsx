@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,8 +16,8 @@ interface ContactProps {
 }
 
 const Contact = ({
-  title = "Contact Us",
-  description = "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
+  title = "Contacte-nos",
+  description = "Envie a sua ideia por e-mail ou pergunte pelo WhatsApp.",
   phone = "(123) 34567890",
   email = "email@example.com",
   web = { label: "shadcnblocks.com", url: "https://shadcnblocks.com" },
@@ -48,50 +49,42 @@ const Contact = ({
               <div className="mx-auto w-fit lg:mx-0 mt-2">
                 <ul className="space-y-2">
                   <li>
-                    <span className="font-bold">Phone:</span> <span>{phone}</span>
+                    <span>T: <a href="tel:37126236432" className="text-yellow-400 no-underline">371 26 236 432</a></span>
                   </li>
                   <li>
-                    <span className="font-bold">Email:</span> <a href={`mailto:${email}`} className="underline">{email}</a>
-                  </li>
-                  <li>
-                    <span className="font-bold">Web:</span> <a href={web.url} target="_blank" className="underline">{web.label}</a>
+                    <span>E: <span className="text-yellow-400">info@carbonprint.lv</span></span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="flex w-full flex-col gap-6 rounded-lg border bg-gray-800 text-white shadow-xl p-10">
-            <div className="flex gap-4">
-              <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="firstname">First Name</Label>
-                <Input type="text" id="firstname" placeholder="First Name" />
-              </div>
-              <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="lastname">Last Name</Label>
-                <Input type="text" id="lastname" placeholder="Last Name" />
-              </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="firstname">Nome</Label>
+              <Input type="text" id="firstname" placeholder="Nome" />
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="email">Email</Label>
               <Input type="email" id="email" placeholder="Email" />
             </div>
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="subject">Subject</Label>
-              <Input type="text" id="subject" placeholder="Subject" />
+              <Label htmlFor="subject">Assunto</Label>
+              <Input type="text" id="subject" placeholder="Assunto" />
             </div>
             <div className="grid w-full gap-1.5">
-              <Label htmlFor="message">Message</Label>
-              <Textarea placeholder="Type your message here." id="message" />
+              <Label htmlFor="message">Mensagem</Label>
+              <Textarea placeholder="Digite sua mensagem aqui." id="message" />
             </div>
             <div className="grid w-full gap-1.5 relative">
-              <Label htmlFor="file">File</Label>
-              <div className="relative flex items-center">
+              <Label htmlFor="file">Arquivo</Label>
+              <div className="flex w-full items-start">
                 <Input
                   type="file"
                   id="file"
-                  className="bg-gray-800 text-white file:bg-gray-800 file:text-white pr-10"
+                  className="w-full bg-gray-800 text-white file:w-auto file:h-8 file:px-3 file:py-1 file:rounded file:font-medium file:bg-white file:text-black file:shadow file:transition-colors file:hover:bg-gray-200 file:text-center file:border-0 file:m-0 pr-10"
                   ref={fileInputRef}
                   onChange={handleFileChange}
+                  title="pievieno savu failu"
                 />
                 {selectedFile && (
                   <button
@@ -105,7 +98,10 @@ const Contact = ({
                 )}
               </div>
             </div>
-            <Button className="w-full">Send Message</Button>
+            <Button className="w-full bg-[#f3b112] hover:bg-[#e0a20f] text-black font-bold rounded-lg border-none flex items-center justify-center">
+              Enviar
+              <ArrowRight className="size-4 ml-2" />
+            </Button>
           </div>
         </div>
       </div>

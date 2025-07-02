@@ -90,14 +90,17 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
   }
 
   html {
     scroll-behavior: smooth;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
   }
 
   /* Enhanced smooth scrolling for anchor links */
@@ -116,3 +119,19 @@ All colors MUST be HSL.
 /* Removed rotate-shadow animation, no longer used */
 
 /* Removed .hero-glow-text class, rolling back effect */
+
+/* Add Roboto Condensed font-face */
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

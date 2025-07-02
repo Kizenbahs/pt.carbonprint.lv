@@ -109,7 +109,7 @@ const Footer = ({
             </ul>
           </div>
         </div>
-        <div className="text-muted-foreground mt-3 flex flex-col items-center text-center gap-3 border-t py-3 text-xs font-medium">
+        <div className="text-muted-foreground mt-3 flex flex-col items-center text-center gap-3 py-3 text-xs font-medium">
           <p className="order-2 lg:order-1">{copyright}</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
