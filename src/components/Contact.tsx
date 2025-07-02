@@ -17,7 +17,7 @@ const Contact = ({
   description = "Envie a sua ideia por e-mail ou pergunte pelo WhatsApp.",
 }: ContactProps) => {
   return (
-    <section id="contact" className="py-32">
+    <section id="contact" className="py-32 bg-[#181e25]">
       <div className="container w-full">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="bg-gray-800 rounded-lg shadow p-10 flex flex-col justify-center items-center text-white">
