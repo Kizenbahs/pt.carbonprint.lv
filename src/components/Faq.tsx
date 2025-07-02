@@ -88,6 +88,7 @@ const Faq = ({
         <Accordion
           type="single"
           collapsible
+          defaultValue="faq-1"
           className="mx-auto w-full lg:max-w-3xl"
         >
           {items.map((item) => (
