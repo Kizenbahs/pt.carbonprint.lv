@@ -44,26 +44,26 @@ const faqItems = [
   },
   {
     id: "faq-4",
-    question: "4. Can I change my order after it has been placed?",
+    question: "4. As peças impressas são precisas ?",
     answer:
-      "You can change your order within 24 hours of placing it by contacting our customer service team.",
+      "Sim, os nossos produtos são resistentes e precisos. Utilizamos impressoras e materiais de alta qualidade para garantir que todos os detalhes são reproduzidos com exactidão e que o resultado final cumpre as tolerâncias exigidas.",
   },
   {
     id: "faq-5",
-    question: "5. What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, and Apple Pay.",
+    question: "5. Utilizam materiais de alta qualidade ?",
+    answer: "Sim, utilizamos apenas materiais de alta qualidade, provenientes dos principais fabricantes do sector. Isto garante excelente durabilidade, precisão e um acabamento profissional em cada peça impressa.",
   },
   {
     id: "faq-6",
-    question: "6. How can I contact customer support?",
+    question: "6. Como receberei o meu pedido ?",
     answer:
-      "You can reach our customer support team via email at support@example.com or by calling 1-800-123-4567.",
+      "Todas as encomendas são entregues exclusivamente através dos serviços da DPD em Portugal. Pode escolher entre entrega ao domicílio ou um cacifo DPD próximo. Receberá uma notificação assim que a sua encomenda estiver pronta para levantamento ou entrega.",
   },
   {
     id: "faq-7",
-    question: "7. Are there any discounts for bulk purchases?",
+    question: "7. Como posso entrar em contacto convosco?",
     answer:
-      "Yes, we offer discounts for bulk purchases. Please contact our sales team for more information.",
+      "A forma mais fácil de nos contactar é por telefone ou WhatsApp. Também pode preencher o formulário de contacto no nosso site e entraremos em contacto consigo o mais breve possível.",
   },
 ];
 
