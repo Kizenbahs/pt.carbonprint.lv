@@ -100,7 +100,7 @@ const Navbar = () => {
               className="max-h-8"
               alt="Shadcn UI Navbar"
             />
-            <span className="text-lg font-semibold tracking-tighter">
+            <span className="text-xl font-semibold tracking-tighter">
               carbonprint
             </span>
           </a>

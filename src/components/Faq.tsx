@@ -26,42 +26,42 @@ interface Faq3Props {
 const faqItems = [
   {
     id: "faq-1",
-    question: "Do you print custom products?",
-    answer:
-      "Yes, we specialize in custom 3D printing! We can print your own designs or help you create custom products from scratch. Just send us your idea or design file and we'll work with you to bring it to life.",
+    question: "1. Imprimem produtos personalizados?",
+          answer:
+        "Sim, somos especializados em impressão 3D personalizada! Podemos imprimir os seus próprios designs ou ajudá-lo a criar produtos personalizados do zero. Basta enviar-nos a sua ideia ou ficheiro de design, e trabalharemos consigo para dar-lhe vida.",
   },
   {
     id: "faq-2",
-    question: "How do I track my order?",
-    answer:
-      "Once your order is shipped, you will receive an email with a tracking number. You can use this number on our website to track your order.",
+    question: "2. Em que formato devo submeter a minha ideia?",
+          answer:
+        "Pode enviar a sua ideia em praticamente qualquer formato — desde uma simples fotografia até a um esboço ou desenho detalhado. Assim que a recebermos, entraremos em contacto para discutir como podemos transformar a sua ideia num modelo 3D imprimível.",
   },
   {
     id: "faq-3",
-    question: "Do you offer international shipping?",
+    question: "3. Conseguem transformar o meu esboço num ficheiro 3D imprimível ?",
     answer:
-      "Yes, we ship to most countries worldwide. Shipping costs and delivery times vary depending on the destination.",
+      "Claro! Se tiver um esboço feito à mão ou apenas um conceito, podemos ajudá-lo a transformá-lo num modelo 3D devidamente preparado para impressão. A nossa equipa acompanha todo o processo de design para garantir que o ficheiro final corresponde às suas expectativas e está optimizado para impressão 3D",
   },
   {
     id: "faq-4",
-    question: "Can I change my order after it has been placed?",
+    question: "4. Can I change my order after it has been placed?",
     answer:
       "You can change your order within 24 hours of placing it by contacting our customer service team.",
   },
   {
     id: "faq-5",
-    question: "What payment methods do you accept?",
+    question: "5. What payment methods do you accept?",
     answer: "We accept all major credit cards, PayPal, and Apple Pay.",
   },
   {
     id: "faq-6",
-    question: "How can I contact customer support?",
+    question: "6. How can I contact customer support?",
     answer:
       "You can reach our customer support team via email at support@example.com or by calling 1-800-123-4567.",
   },
   {
     id: "faq-7",
-    question: "Are there any discounts for bulk purchases?",
+    question: "7. Are there any discounts for bulk purchases?",
     answer:
       "Yes, we offer discounts for bulk purchases. Please contact our sales team for more information.",
   },
@@ -95,10 +95,8 @@ const Faq = ({
             >
               {items.map((item) => (
                 <AccordionItem key={item.id} value={item.id}>
-                  <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60 text-white">
-                    <div className="font-medium sm:py-1 lg:py-2 lg:text-lg text-white">
-                      {item.question}
-                    </div>
+                  <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60 text-white data-[state=open]:text-yellow-400 font-medium sm:py-1 lg:py-2 lg:text-lg">
+                    {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="sm:mb-1 lg:mb-2 text-white">
                     <div className="lg:text-lg text-white">
