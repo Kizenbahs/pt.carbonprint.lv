@@ -2,7 +2,7 @@
 
 import { MenuIcon, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import {
   Accordion,
@@ -30,6 +30,7 @@ import {
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleSmoothScroll = (e: MouseEvent) => {
@@ -89,7 +90,7 @@ const Navbar = () => {
   return (
     <section className="py-4">
       <div className="container">
-        <nav className="flex items-center justify-between">
+        <nav className="flex items-center justify-center">
           <a
             href="https://pt.carbonprint.lv/"
             className="flex items-center gap-2"
@@ -103,103 +104,6 @@ const Navbar = () => {
               carbonprint
             </span>
           </a>
-          <NavigationMenu className="hidden lg:block">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="https://www.etsy.com/shop/CarbonPrintLV"
-                  className={navigationMenuTriggerStyle()}
-                  target="_blank"
-                >
-                  Loja
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#faq"
-                  className={navigationMenuTriggerStyle()}
-                >
-                  Porquê nós?
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#contact"
-                  className={navigationMenuTriggerStyle()}
-                >
-                  Contactos
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <div className="hidden items-center gap-4 lg:flex">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="shrink-0"
-              aria-label="Toggle dark mode"
-            >
-              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
-          </div>
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="outline" size="icon">
-                <MenuIcon className="h-4 w-4" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="top" className="max-h-screen overflow-auto">
-              <SheetHeader>
-                <SheetTitle>
-                  <a
-                    href="https://pt.carbonprint.lv/"
-                    className="flex items-center gap-2"
-                  >
-                    <img
-                      src="/img/3d-print-logo.png"
-                      className="max-h-8"
-                      alt="carbonprint logo"
-                    />
-                    <span className="text-lg font-semibold tracking-tighter">
-                      carbonprint
-                    </span>
-                  </a>
-                </SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col p-4">
-                <div className="flex flex-col gap-6">
-                  <a 
-                    href="https://www.etsy.com/shop/CarbonPrintLV" 
-                    className="font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Loja
-                  </a>
-                  <a href="#faq" className="font-medium">
-                    Porquê nós?
-                  </a>
-                  <a href="#contact" className="font-medium">
-                    Contactos
-                  </a>
-                </div>
-                <div className="mt-6 flex flex-col gap-4">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                    className="shrink-0 self-end"
-                    aria-label="Toggle dark mode"
-                  >
-                    <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                    <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                  </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
         </nav>
       </div>
     </section>

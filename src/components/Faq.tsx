@@ -79,7 +79,7 @@ const Faq = ({
   return (
     <section id="faq" className="py-32 bg-white dark:bg-gray-800">
       <div className="container space-y-16">
-        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
+        <div className="mx-auto flex max-w-3xl flex-col text-center">
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             {heading}
           </h2>
