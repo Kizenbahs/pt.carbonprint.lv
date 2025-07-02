@@ -45,7 +45,7 @@ const Hero = ({
   primaryButtonClassName,
 }: Hero1Props) => {
   return (
-    <section className="py-32 bg-gradient-to-b from-background to-muted/20">
+    <section className="pt-6 pb-32 bg-gradient-to-b from-background to-muted/20 lg:py-32">
       <div className="container">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">

@@ -55,6 +55,19 @@ const Contact = ({
                     <span>E: <span className="text-yellow-400">info@carbonprint.lv</span></span>
                   </li>
                 </ul>
+                <a
+                  href="https://wa.me/37126236432"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold rounded-lg text-sm shadow transition-colors"
+                  style={{ minWidth: '120px', justifyContent: 'center' }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                    <path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.02L0 24l6.18-1.62A12.07 12.07 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.68-.5-5.26-1.44l-.38-.22-3.67.96.98-3.58-.25-.37A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.54 0 4.93.99 6.73 2.77A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.2-7.8c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.28.7.9.86.16.18.32.2.6.07.28.14-1.18.44-2.25 1.4-.83.74 1.39.16.28.02.43.12.57.13.13.28.34.42.51.14.17.18.29.28.48.09.18.05.36.02.5.07.14.61 1.47.84 2.01.22.53.45.46.62.47.16.01.36.01.56.01.2 0 .52-.07.8-.34.28-.28 1.08-1.06 1.08-2.58 0-1.52-1.1-2.99-1.25-3.2-.15-.21-2.16-3.3-5.23-4.5-.73-.29-1.3-.46-1.75-.59-.74-.23-1.41-.2-1.94-.12-.59.09-1.65.67-1.88 1.32-.23.65-.23 1.21-.16 1.32.07.11.25.18.53.32.78.6.14.28.32.46.46.64.6.28.14.54.22.78.22 1.06z" />
+                  </svg>
+                  Enviar ideia para WhatsApp
+                </a>
+                <div className="block md:hidden text-center text-muted-foreground text-base mt-2 mb-2">ou</div>
               </div>
             </div>
           </div>
@@ -99,7 +112,7 @@ const Contact = ({
               </div>
             </div>
             <Button className="w-full bg-[#f3b112] hover:bg-[#e0a20f] text-black font-bold rounded-lg border-none flex items-center justify-center">
-              Enviar
+              Enviar ideia
               <ArrowRight className="size-4 ml-2" />
             </Button>
           </div>
