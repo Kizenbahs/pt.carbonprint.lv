@@ -61,7 +61,13 @@ const faqItems = [
   },
   {
     id: "faq-7",
-    question: "7. Como posso entrar em contacto convosco?",
+    question: "7. Como é feito o pagamento da encomenda?",
+    answer:
+      "O pagamento é feito através da nossa loja no Etsy ou por transferência bancária com base na fatura que fornecemos.",
+  },
+  {
+    id: "faq-8",
+    question: "8. Como posso entrar em contacto convosco?",
     answer:
       "A forma mais fácil de nos contactar é por telefone ou WhatsApp. Também pode preencher o formulário de contacto no nosso site e entraremos em contacto consigo o mais breve possível.",
   },
