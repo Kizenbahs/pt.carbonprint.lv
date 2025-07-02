@@ -77,35 +77,39 @@ const Faq = ({
   supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
-    <section id="faq" className="py-32 bg-white dark:bg-gray-800">
+    <section id="faq" className="py-32 bg-[#232a32]">
       <div className="container space-y-16">
-        <div className="mx-auto flex max-w-3xl flex-col text-center">
+        <div className="mx-auto flex flex-col text-center">
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             {heading}
           </h2>
-          <p className="text-muted-foreground lg:text-lg">{description}</p>
+          <p className="text-white lg:text-lg">{description}</p>
         </div>
-        <Accordion
-          type="single"
-          collapsible
-          defaultValue="faq-1"
-          className="mx-auto w-full lg:max-w-3xl"
-        >
-          {items.map((item) => (
-            <AccordionItem key={item.id} value={item.id}>
-              <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60">
-                <div className="font-medium sm:py-1 lg:py-2 lg:text-lg">
-                  {item.question}
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="sm:mb-1 lg:mb-2">
-                <div className="text-muted-foreground lg:text-lg">
-                  {item.answer}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="flex justify-center">
+          <div className="bg-[#181e25] rounded-xl shadow-xl border border-[#232a32] p-10 flex flex-col justify-center text-white w-full max-w-2xl">
+            <Accordion
+              type="single"
+              collapsible
+              defaultValue="faq-1"
+              className="w-full"
+            >
+              {items.map((item) => (
+                <AccordionItem key={item.id} value={item.id}>
+                  <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60 text-white">
+                    <div className="font-medium sm:py-1 lg:py-2 lg:text-lg text-white">
+                      {item.question}
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="sm:mb-1 lg:mb-2 text-white">
+                    <div className="lg:text-lg text-white">
+                      {item.answer}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
       </div>
     </section>
   );
