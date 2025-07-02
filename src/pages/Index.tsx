@@ -61,6 +61,10 @@ const Index = () => {
 };
 
 const galleryImages = [
+  { src: "/img/3d-print-10.jpg" },
+  { src: "/img/3d-print-09.jpg" },
+  { src: "/img/3d-print-08.jpg" },
+  { src: "/img/3d-print-07.jpg" },
   { src: "/img/3d-print-01.jpg" },
   { src: "/img/3d-print-02.jpg" },
   { src: "/img/3d-print-03.jpg" },
@@ -81,7 +85,7 @@ function GalleryWithDots() {
           {[...galleryImages, ...galleryImages].map((img, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
-                <div className="bg-gray-800 rounded-md shadow-lg p-2 min-w-[270px] flex flex-col items-center cursor-pointer">
+                <div className="bg-gray-800 rounded-md shadow-lg p-2 min-w-[270px] flex flex-col items-center cursor-pointer mb-24">
                   <img
                     src={img.src}
                     alt="Gallery image"
@@ -108,7 +112,7 @@ function GalleryWithDots() {
     <div className="w-full flex flex-col items-center mt-8">
       <Dialog>
         <DialogTrigger asChild>
-          <div className="bg-gray-800 rounded-md shadow-lg p-2 w-full max-w-xs flex flex-col items-center cursor-pointer">
+          <div className="bg-gray-800 rounded-md shadow-lg p-2 w-full max-w-xs flex flex-col items-center cursor-pointer mb-8">
             <img
               src={galleryImages[current].src}
               alt="Gallery image"
