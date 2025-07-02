@@ -61,12 +61,12 @@ const Index = () => {
 };
 
 const galleryImages = [
-  { src: "/img/3d-print-logo.png", label: "Projeto 1" },
-  { src: "/placeholder.svg", label: "Projeto 2" },
-  { src: "/img/3d-print-logo.png", label: "Projeto 3" },
-  { src: "/placeholder.svg", label: "Projeto 4" },
-  { src: "/img/3d-print-logo.png", label: "Projeto 5" },
-  { src: "/placeholder.svg", label: "Projeto 6" },
+  { src: "/img/3d-print-01.jpg" },
+  { src: "/img/3d-print-02.jpg" },
+  { src: "/img/3d-print-03.jpg" },
+  { src: "/img/3d-print-04.jpg" },
+  { src: "/img/3d-print-05.jpg" },
+  { src: "/img/3d-print-06.jpg" },
 ];
 
 function GalleryWithDots() {
@@ -84,16 +84,15 @@ function GalleryWithDots() {
                 <div className="bg-gray-800 rounded-lg shadow-lg p-6 min-w-[330px] flex flex-col items-center cursor-pointer">
                   <img
                     src={img.src}
-                    alt={img.label}
-                    className="w-64 h-64 object-contain mb-3 transition-transform duration-200 hover:scale-110"
+                    alt="Gallery image"
+                    className="w-64 h-64 object-cover rounded-lg mb-3 transition-transform duration-200 hover:scale-110"
                   />
-                  <span className="text-xl font-semibold mt-3">{img.label}</span>
                 </div>
               </DialogTrigger>
               <DialogContent className="flex flex-col items-center bg-transparent border-none shadow-none p-0">
                 <img
                   src={img.src}
-                  alt={img.label}
+                  alt="Gallery image"
                   className="w-[80vw] max-w-3xl h-auto max-h-[80vh] rounded-lg shadow-2xl transition-transform duration-200 hover:scale-105"
                 />
               </DialogContent>
@@ -112,16 +111,15 @@ function GalleryWithDots() {
           <div className="bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-xs flex flex-col items-center cursor-pointer">
             <img
               src={galleryImages[current].src}
-              alt={galleryImages[current].label}
-              className="w-64 h-64 object-contain mb-3 transition-transform duration-200 hover:scale-110"
+              alt="Gallery image"
+              className="w-64 h-64 object-cover rounded-lg mb-3 transition-transform duration-200 hover:scale-110"
             />
-            <span className="text-xl font-semibold mt-3">{galleryImages[current].label}</span>
           </div>
         </DialogTrigger>
         <DialogContent className="flex flex-col items-center bg-transparent border-none shadow-none p-0">
           <img
             src={galleryImages[current].src}
-            alt={galleryImages[current].label}
+            alt="Gallery image"
             className="w-[90vw] max-w-2xl h-auto max-h-[80vh] rounded-lg shadow-2xl transition-transform duration-200 hover:scale-105"
           />
         </DialogContent>
