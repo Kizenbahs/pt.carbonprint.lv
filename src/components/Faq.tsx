@@ -25,49 +25,55 @@ interface Faq3Props {
 
 const faqItems = [
   {
+    id: "faq-0",
+    question: "1. Porque escolher-nos?",
+    answer:
+      "Da ideia ao produto final – fornecemos peças de alto desempenho em nylon reforçado com fibra de carbono. Os nossos produtos são duráveis, precisos e produzidos com prazos de execução rápidos.",
+  },
+  {
     id: "faq-1",
-    question: "1. Imprimem produtos personalizados?",
-          answer:
-        "Sim, somos especializados em impressão 3D personalizada! Podemos imprimir os seus próprios designs ou ajudá-lo a criar produtos personalizados do zero. Basta enviar-nos a sua ideia ou ficheiro de design, e trabalharemos consigo para dar-lhe vida.",
+    question: "2. Imprimem produtos personalizados?",
+    answer:
+      "Sim, somos especializados em impressão 3D personalizada! Podemos imprimir os seus próprios designs ou ajudá-lo a criar produtos personalizados do zero. Basta enviar-nos a sua ideia ou ficheiro de design, e trabalharemos consigo para dar-lhe vida.",
   },
   {
     id: "faq-2",
-    question: "2. Em que formato devo submeter a minha ideia?",
-          answer:
-        "Pode enviar a sua ideia em praticamente qualquer formato — desde uma simples fotografia até a um esboço ou desenho detalhado. Assim que a recebermos, entraremos em contacto para discutir como podemos transformar a sua ideia num modelo 3D imprimível.",
+    question: "3. Em que formato devo submeter a minha ideia?",
+    answer:
+      "Pode enviar a sua ideia em praticamente qualquer formato — desde uma simples fotografia até a um esboço ou desenho detalhado. Assim que a recebermos, entraremos em contacto para discutir como podemos transformar a sua ideia num modelo 3D imprimível.",
   },
   {
     id: "faq-3",
-    question: "3. Conseguem transformar o meu esboço num ficheiro 3D imprimível ?",
+    question: "4. Conseguem transformar o meu esboço num ficheiro 3D imprimível ?",
     answer:
       "Claro! Se tiver um esboço feito à mão ou apenas um conceito, podemos ajudá-lo a transformá-lo num modelo 3D devidamente preparado para impressão. A nossa equipa acompanha todo o processo de design para garantir que o ficheiro final corresponde às suas expectativas e está optimizado para impressão 3D",
   },
   {
     id: "faq-4",
-    question: "4. As peças impressas são precisas ?",
+    question: "5. As peças impressas são precisas ?",
     answer:
       "Sim, os nossos produtos são resistentes e precisos. Utilizamos impressoras e materiais de alta qualidade para garantir que todos os detalhes são reproduzidos com exactidão e que o resultado final cumpre as tolerâncias exigidas.",
   },
   {
     id: "faq-5",
-    question: "5. Utilizam materiais de alta qualidade ?",
+    question: "6. Utilizam materiais de alta qualidade ?",
     answer: "Sim, utilizamos apenas materiais de alta qualidade, provenientes dos principais fabricantes do sector. Isto garante excelente durabilidade, precisão e um acabamento profissional em cada peça impressa.",
   },
   {
     id: "faq-6",
-    question: "6. Como receberei o meu pedido ?",
+    question: "7. Como receberei o meu pedido ?",
     answer:
       "Todas as encomendas são entregues exclusivamente através dos serviços da DPD em Portugal. Pode escolher entre entrega ao domicílio ou um cacifo DPD próximo. Receberá uma notificação assim que a sua encomenda estiver pronta para levantamento ou entrega.",
   },
   {
     id: "faq-7",
-    question: "7. Como é feito o pagamento da encomenda?",
+    question: "8. Como é feito o pagamento da encomenda?",
     answer:
       "O pagamento é feito através da nossa loja no Etsy ou por transferência bancária com base na fatura que fornecemos.",
   },
   {
     id: "faq-8",
-    question: "8. Como posso entrar em contacto convosco?",
+    question: "9. Como posso entrar em contacto convosco?",
     answer:
       "A forma mais fácil de nos contactar é por telefone ou WhatsApp. Também pode preencher o formulário de contacto no nosso site e entraremos em contacto consigo o mais breve possível.",
   },
@@ -96,7 +102,7 @@ const Faq = ({
             <Accordion
               type="single"
               collapsible
-              defaultValue="faq-1"
+              defaultValue="faq-0"
               className="w-full"
             >
               {items.map((item) => (
