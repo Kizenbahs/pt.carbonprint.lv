@@ -81,11 +81,11 @@ function GalleryWithDots() {
           {[...galleryImages, ...galleryImages].map((img, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
-                <div className="bg-gray-800 rounded-lg shadow-lg p-6 min-w-[330px] flex flex-col items-center cursor-pointer">
+                <div className="bg-gray-800 rounded-md shadow-lg p-2 min-w-[270px] flex flex-col items-center cursor-pointer">
                   <img
                     src={img.src}
                     alt="Gallery image"
-                    className="w-64 h-64 object-cover rounded-lg mb-3 transition-transform duration-200 hover:scale-110"
+                    className="w-72 h-72 object-cover rounded-md transition-transform duration-200 hover:scale-110"
                   />
                 </div>
               </DialogTrigger>
@@ -108,11 +108,11 @@ function GalleryWithDots() {
     <div className="w-full flex flex-col items-center mt-8">
       <Dialog>
         <DialogTrigger asChild>
-          <div className="bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-xs flex flex-col items-center cursor-pointer">
+          <div className="bg-gray-800 rounded-md shadow-lg p-2 w-full max-w-xs flex flex-col items-center cursor-pointer">
             <img
               src={galleryImages[current].src}
               alt="Gallery image"
-              className="w-64 h-64 object-cover rounded-lg mb-3 transition-transform duration-200 hover:scale-110"
+              className="w-72 h-72 object-cover rounded-md transition-transform duration-200 hover:scale-110"
             />
           </div>
         </DialogTrigger>
