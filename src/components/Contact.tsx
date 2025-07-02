@@ -64,7 +64,7 @@ const Contact = ({
             </div>
             <div className="grid w-full gap-1.5">
               <Label htmlFor="message">Mensagem</Label>
-              <Textarea placeholder="Digite sua mensagem aqui." id="message" />
+              <Textarea placeholder="Conte-nos sua ideia ou mande uma pergunta!" id="message" />
             </div>
             <Button className="w-full bg-[#f3b112] hover:bg-[#e0a20f] text-black font-bold rounded-lg border-none flex items-center justify-center">
               Enviar ideia
