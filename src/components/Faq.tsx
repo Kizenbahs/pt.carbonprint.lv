@@ -92,7 +92,7 @@ const Faq = ({
           <p className="text-white lg:text-lg">{description}</p>
         </div>
         <div className="flex justify-center">
-          <div className="bg-[#181e25] rounded-xl shadow-xl border border-[#232a32] p-10 flex flex-col justify-center text-white w-full max-w-2xl">
+          <div className="bg-[#181e25] rounded-xl shadow-xl border border-[#232a32] p-10 flex flex-col justify-center text-white w-full max-w-2xl text-left">
             <Accordion
               type="single"
               collapsible
@@ -101,11 +101,11 @@ const Faq = ({
             >
               {items.map((item) => (
                 <AccordionItem key={item.id} value={item.id}>
-                  <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60 text-white data-[state=open]:text-yellow-400 font-medium sm:py-1 lg:py-2 lg:text-lg">
+                  <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60 text-white data-[state=open]:text-yellow-400 font-medium sm:py-1 lg:py-2 lg:text-lg text-left">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="sm:mb-1 lg:mb-2 text-white">
-                    <div className="lg:text-lg text-white">
+                  <AccordionContent className="sm:mb-1 lg:mb-2 text-white text-left">
+                    <div className="lg:text-lg text-white text-left">
                       {item.answer}
                     </div>
                   </AccordionContent>
