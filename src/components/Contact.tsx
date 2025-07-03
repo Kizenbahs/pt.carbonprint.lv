@@ -19,7 +19,7 @@ const Contact = ({
   const [formData, setFormData] = useState({
     firstname: '',
     email: '',
-    subject: '',
+    phone: '',
     message: ''
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -55,7 +55,7 @@ const Contact = ({
       const templateParams = {
         from_name: formData.firstname,
         from_email: formData.email,
-        subject: formData.subject,
+        phone: formData.phone,
         message: formData.message,
         to_name: 'carbonprint',
       };
@@ -63,7 +63,7 @@ const Contact = ({
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
       setIsSuccess(true);
-      setFormData({ firstname: '', email: '', subject: '', message: '' });
+      setFormData({ firstname: '', email: '', phone: '', message: '' });
       
       // Reset success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
@@ -150,14 +150,14 @@ const Contact = ({
                 />
               </div>
               <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="subject" className="text-white">Assunto</Label>
+                <Label htmlFor="phone" className="text-white">Telefone</Label>
                 <Input 
-                  type="text" 
-                  id="subject" 
-                  name="subject"
-                  value={formData.subject}
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="Assunto" 
+                  placeholder="Telefone" 
                   className="bg-white border-black border-2 focus:border-black focus:ring-0 text-black" 
                   required 
                 />
