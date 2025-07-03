@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import emailjs from '@emailjs/browser';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,6 +16,65 @@ interface ContactProps {
 const Contact = ({
   title = "Contacte-nos",
 }: ContactProps) => {
+  const [formData, setFormData] = useState({
+    firstname: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  // EmailJS configuration from environment variables
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
+    // Check if environment variables are configured
+    if (!serviceId || !templateId || !publicKey) {
+      setError('Configuração de email não encontrada. Por favor, configure as variáveis de ambiente.');
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const templateParams = {
+        from_name: formData.firstname,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'carbonprint',
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setIsSuccess(true);
+      setFormData({ firstname: '', email: '', subject: '', message: '' });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setError('Erro ao enviar mensagem. Tente novamente ou contacte-nos pelo WhatsApp.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="pt-24 pb-24 bg-white">
       <div className="container w-full">
@@ -52,26 +112,75 @@ const Contact = ({
             </div>
           </div>
           <div className="bg-black rounded-lg shadow border border-gray-200 p-10 flex flex-col justify-center text-white">
-            <form className="flex flex-col gap-6 w-full">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full">
+              {isSuccess && (
+                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                  Mensagem enviada com sucesso! Entraremos em contacto em breve.
+                </div>
+              )}
+              {error && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                  {error}
+                </div>
+              )}
               <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="firstname" className="text-white">Nome</Label>
-                <Input type="text" id="firstname" placeholder="Nome" className="bg-white border-black border-2 focus:border-black focus:ring-0" />
+                <Input 
+                  type="text" 
+                  id="firstname" 
+                  name="firstname"
+                  value={formData.firstname}
+                  onChange={handleInputChange}
+                  placeholder="Nome" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  required 
+                />
               </div>
               <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="email" className="text-white">Email</Label>
-                <Input type="email" id="email" placeholder="Email" className="bg-white border-black border-2 focus:border-black focus:ring-0" />
+                <Input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Email" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  required 
+                />
               </div>
               <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="subject" className="text-white">Assunto</Label>
-                <Input type="text" id="subject" placeholder="Assunto" className="bg-white border-black border-2 focus:border-black focus:ring-0" />
+                <Input 
+                  type="text" 
+                  id="subject" 
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  placeholder="Assunto" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  required 
+                />
               </div>
               <div className="grid w-full gap-1.5">
                 <Label htmlFor="message" className="text-white">Mensagem</Label>
-                <Textarea placeholder="Conte-nos sua ideia ou mande uma pergunta!" id="message" className="bg-white border-black border-2 focus:border-black focus:ring-0" />
+                <Textarea 
+                  placeholder="Conte-nos sua ideia ou mande uma pergunta!" 
+                  id="message" 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  required 
+                />
               </div>
-              <Button className="w-full bg-[#f3b112] hover:bg-[#e0a20f] text-black">
-                Enviar ideia
-                <ArrowRight className="size-4 ml-2" />
+              <Button 
+                type="submit" 
+                disabled={isLoading}
+                className="w-full bg-[#f3b112] hover:bg-[#e0a20f] text-black disabled:opacity-50"
+              >
+                {isLoading ? 'A enviar...' : 'Enviar ideia'}
+                {!isLoading && <ArrowRight className="size-4 ml-2" />}
               </Button>
             </form>
           </div>
