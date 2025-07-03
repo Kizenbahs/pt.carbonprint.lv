@@ -168,10 +168,10 @@ const Faq = ({
                     <img src="/img/3d-print-10.jpg" alt="3D Print 10" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
                   </div>
                   <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-01.jpg" alt="3D Print 11" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
+                    <img src="/img/3d-print-11.jpg" alt="3D Print 11" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
                   </div>
                   <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-02.jpg" alt="3D Print 12" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
+                    <img src="/img/3d-print-12.jpg" alt="3D Print 12" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
                   </div>
                 </div>
               </div>
