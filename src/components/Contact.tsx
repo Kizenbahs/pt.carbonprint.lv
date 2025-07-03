@@ -80,7 +80,7 @@ const Contact = ({
       <div className="container w-full">
         <div className="text-center flex flex-col items-center">
           <Badge className="mb-6 mx-auto text-black bg-gray-100 border-gray-300">
-            Contacte-nos
+            Será um prazer conversar sobre a sua ideia
           </Badge>
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl text-black">
             {title}
@@ -92,7 +92,7 @@ const Contact = ({
               <div className="mx-auto w-fit mt-2">
                 <ul className="space-y-2">
                   <li>
-                    <span>T: <a href="tel:37126236432" className="text-black hover:underline font-medium">371 26 236 432</a></span>
+                    <span>T: <a href="tel:37126236432" className="text-black hover:underline font-medium">+371 26 236 432</a></span>
                   </li>
                   <li>
                     <span>E: <span className="text-black font-medium">info@carbonprint.lv</span></span>
@@ -132,7 +132,7 @@ const Contact = ({
                   value={formData.firstname}
                   onChange={handleInputChange}
                   placeholder="Nome" 
-                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0 text-black" 
                   required 
                 />
               </div>
@@ -145,7 +145,7 @@ const Contact = ({
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Email" 
-                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0 text-black" 
                   required 
                 />
               </div>
@@ -158,7 +158,7 @@ const Contact = ({
                   value={formData.subject}
                   onChange={handleInputChange}
                   placeholder="Assunto" 
-                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0 text-black" 
                   required 
                 />
               </div>
@@ -170,7 +170,7 @@ const Contact = ({
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="bg-white border-black border-2 focus:border-black focus:ring-0" 
+                  className="bg-white border-black border-2 focus:border-black focus:ring-0 text-black" 
                   required 
                 />
               </div>
