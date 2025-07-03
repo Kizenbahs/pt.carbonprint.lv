@@ -48,7 +48,7 @@ const Hero = ({
     <section className="pt-6 pb-32 bg-black lg:py-32 relative overflow-hidden">
       {/* Gradient Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808040_1px,transparent_1px),linear-gradient(to_bottom,#80808040_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-      <div className="container">
+      <div className="container mx-auto lg:px-16">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {badge && (

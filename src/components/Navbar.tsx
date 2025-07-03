@@ -89,7 +89,7 @@ const Navbar = () => {
 
   return (
     <section className="py-4 bg-black">
-      <div className="container">
+      <div className="container mx-auto lg:px-16">
         <nav className="flex items-center justify-center lg:justify-start">
           <a
             href="https://pt.carbonprint.lv/"

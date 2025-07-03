@@ -77,7 +77,7 @@ const Contact = ({
 
   return (
     <section id="contact" className="pt-24 pb-24 bg-white">
-      <div className="container w-full">
+      <div className="container mx-auto lg:px-16">
         <div className="text-center flex flex-col items-center">
           <Badge className="mb-6 mx-auto text-black bg-gray-100 border-gray-300">
             Será um prazer conversar sobre a sua ideia
