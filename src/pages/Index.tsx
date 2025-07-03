@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import React, { useState } from "react";
+import { SobreNos } from "@/components/SobreNos";
 
 const Index = () => {
   return (
@@ -31,18 +32,21 @@ const Index = () => {
         }}
         primaryButtonClassName="bg-[#f3b112] hover:bg-[#e0a20f] text-black border-none"
       />
+      <SobreNos />
       <div id="faq">
-        <Faq 
-          heading="Perguntas Frequentes"
-          description="Encontre respostas para perguntas comuns sobre impressão 3D e os nossos serviços. Não encontrou o que procura? Contacte a nossa equipa de apoio."
-          supportHeading="Need personalized help?"
-          supportDescription="Our experienced developers are here to help you implement these components successfully in your projects."
-          supportButtonText="Get Support"
-          supportButtonUrl="#"
-        />
+        <section className="pt-1 pb-32 bg-[#181e25]">
+          <Faq 
+            heading="Perguntas Frequentes"
+            description="Encontre respostas para perguntas comuns sobre impressão 3D e os nossos serviços. Não encontrou o que procura? Contacte a nossa equipa de apoio."
+            supportHeading="Need personalized help?"
+            supportDescription="Our experienced developers are here to help you implement these components successfully in your projects."
+            supportButtonText="Get Support"
+            supportButtonUrl="#"
+          />
+        </section>
       </div>
       {/* Gallery Grid Below FAQ */}
-      <div className="w-full py-0 flex flex-col items-center bg-black pt-16">
+      <section className="w-full py-32 flex flex-col items-center bg-black">
         <div className="mx-auto flex max-w-3xl flex-col text-center">
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             Galeria
@@ -53,7 +57,7 @@ const Index = () => {
         </div>
         {/* Responsive Gallery: Marquee on desktop, swipeable with dots on mobile */}
         <GalleryWithDots />
-      </div>
+      </section>
       <Contact />
       <Footer />
     </div>

@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 interface FaqItem {
   id: string;
@@ -92,10 +93,12 @@ const Faq = ({
     <section id="faq" className="py-32 bg-[#181e25]">
       <div className="container space-y-16">
         <div className="mx-auto flex flex-col text-center">
+          <Badge className="mb-6 mx-auto text-gray-900 bg-gray-200 border border-gray-300">
+          Porque é que os clientes nos escolhem
+          </Badge>
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             {heading}
           </h2>
-          <p className="text-white lg:text-lg">{description}</p>
         </div>
         <div className="flex justify-center">
           <div className="bg-[#181e25] rounded-xl shadow-xl border border-[#232a32] p-10 flex flex-col justify-center text-white w-full max-w-2xl text-left">
