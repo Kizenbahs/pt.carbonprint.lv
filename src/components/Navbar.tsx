@@ -88,7 +88,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="py-4 bg-black">
+    <section className="py-8 bg-black">
       <div className="container mx-auto lg:px-16">
         <nav className="flex items-center justify-center lg:justify-start">
           <a
@@ -98,7 +98,7 @@ const Navbar = () => {
             <img
               src="/img/3d-print-logo.png"
               className="max-h-8"
-              alt="Shadcn UI Navbar"
+              alt="3d printing"
             />
             <span className="text-xl font-semibold tracking-tighter">
               carbonprint
