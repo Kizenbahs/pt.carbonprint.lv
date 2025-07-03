@@ -90,18 +90,18 @@ const Faq = ({
   supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
-    <section id="faq" className="py-32 bg-[#181e25]">
-      <div className="container space-y-16">
+    <section id="faq" className="pt-24 pb-32 bg-black">
+      <div className="container">
         <div className="mx-auto flex flex-col text-center">
-          <Badge className="mb-6 mx-auto text-gray-900 bg-gray-200 border border-gray-300">
-          Porque é que os clientes nos escolhem
+          <Badge className="mb-6 mt-0 mx-auto text-gray-900 bg-gray-200 border border-gray-300">
+            Porque é que os clientes nos escolhem
           </Badge>
-          <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
+          <h2 className="mb-3 mt-0 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             {heading}
           </h2>
         </div>
-        <div className="flex justify-center">
-          <div className="bg-[#181e25] rounded-xl shadow-xl border border-[#232a32] p-10 flex flex-col justify-center text-white w-full max-w-2xl text-left">
+        <div className="w-full max-w-2xl mx-auto">
+          <div className="bg-black rounded-xl shadow-xl border border-gray-700 p-10 flex flex-col justify-center text-white w-full text-left">
             <Accordion
               type="single"
               collapsible

@@ -79,7 +79,7 @@ const Footer = ({
   legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
   return (
-    <section className="py-16 dark:bg-gray-800">
+    <section className="py-16 bg-black">
       <div className="container">
         <div className="flex w-full flex-col items-center text-center gap-6">
           <div className="flex w-full flex-col items-center gap-4">
@@ -93,14 +93,14 @@ const Footer = ({
                   className="h-8"
                 />
               </a>
-              <h2 className="text-xl font-semibold">{logo.title}</h2>
+              <h2 className="text-xl font-semibold text-white">{logo.title}</h2>
             </div>
-            <p className="text-muted-foreground max-w-[70%] text-xs text-center">
+            <p className="text-gray-300 max-w-[70%] text-xs text-center">
               {description}
             </p>
-            <ul className="text-muted-foreground flex items-center justify-center space-x-6">
+            <ul className="text-gray-300 flex items-center justify-center space-x-6">
               {socialLinks.map((social, idx) => (
-                <li key={idx} className="hover:text-primary font-medium">
+                <li key={idx} className="hover:text-white font-medium transition-colors">
                   <a href={social.href} aria-label={social.label} target="_blank" rel="noopener noreferrer">
                     {social.icon}
                   </a>
@@ -109,11 +109,11 @@ const Footer = ({
             </ul>
           </div>
         </div>
-        <div className="text-muted-foreground mt-3 flex flex-col items-center text-center gap-3 py-3 text-xs font-medium">
+        <div className="text-gray-300 mt-3 flex flex-col items-center text-center gap-3 py-3 text-xs font-medium">
           <p className="order-2 lg:order-1">{copyright}</p>
           <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
             {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:text-primary">
+              <li key={idx} className="hover:text-white transition-colors">
                 <a href={link.href}> {link.name}</a>
               </li>
             ))}

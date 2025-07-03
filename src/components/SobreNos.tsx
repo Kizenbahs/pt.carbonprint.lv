@@ -27,13 +27,13 @@ const sobreNosPosts = [
 
 const SobreNos = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto flex flex-col items-center gap-16 lg:px-16">
+    <section className="pt-24 pb-24 bg-white">
+      <div className="container mx-auto flex flex-col items-center lg:px-16">
         <div className="text-center">
-          <Badge variant="secondary" className="mb-6 text-gray-900 bg-gray-100 border border-gray-300">
+          <Badge variant="secondary" className="mb-6 mt-0 text-gray-900 bg-gray-100 border border-gray-300">
             Somos especialistas em impressão 3D
           </Badge>
-          <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl text-gray-900">
+          <h2 className="mb-3 mt-0 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl text-gray-900">
             Sobre nós
           </h2>
         </div>
