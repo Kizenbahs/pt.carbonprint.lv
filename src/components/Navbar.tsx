@@ -88,7 +88,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="py-4">
+    <section className="py-4 bg-black">
       <div className="container">
         <nav className="flex items-center justify-center lg:justify-start">
           <a

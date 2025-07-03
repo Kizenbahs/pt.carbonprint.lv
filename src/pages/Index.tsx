@@ -42,7 +42,7 @@ const Index = () => {
         />
       </div>
       {/* Gallery Grid Below FAQ */}
-      <div className="w-full py-0 flex flex-col items-center mt-32">
+      <div className="w-full py-0 flex flex-col items-center bg-black pt-16">
         <div className="mx-auto flex max-w-3xl flex-col text-center">
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             Galeria
