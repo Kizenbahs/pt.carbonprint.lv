@@ -7,7 +7,7 @@ const sobreNosPosts = [
     title: "Serviço Personalizado",
     summary:
       "Oferecemos um serviço de impressão 3D de alta qualidade, com uma abordagem personalizada para cada projeto. Aconselhamos sobre melhorias nos ficheiros e otimização dos parâmetros de impressão para garantir uma produção mais rápida, custos mais baixos e peças mais fortes e duráveis.",
-    image: "/img/3d-print-01.jpg",
+    image: "/img/3d-print-16.jpg",
   },
   {
     id: "sobre-2",
@@ -21,7 +21,7 @@ const sobreNosPosts = [
     title: "Experiência e Qualidade",
     summary:
       "A qualidade dos nossos serviços é sustentada por mais de 15 anos de experiência em metalomecânica, programação e operação de máquinas CNC. Esta experiência permite-nos compreender plenamente as necessidades dos nossos clientes e oferecer soluções práticas e tecnicamente bem fundamentadas.",
-    image: "/img/3d-print-03.jpg",
+    image: "/img/3d-print-15.jpg",
   },
 ];
 
