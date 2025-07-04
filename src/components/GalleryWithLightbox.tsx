@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const images = [
   { src: "/img/3d-print-01.jpg", alt: "3D Print 1", title: "3D Print 1" },
@@ -74,27 +75,31 @@ export default function GalleryWithLightbox() {
   }, [selectedIndex, currentIndex]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-center mb-2">Galeria de Fotos</h1>
-        <p className="text-muted-foreground text-center">Clique em qualquer imagem para ver em lightbox</p>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        {images.map((image, index) => (
-          <div
-            key={image.src}
-            className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-105"
-            onClick={() => openLightbox(index)}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="object-cover w-full h-full transition-opacity group-hover:opacity-80"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-          </div>
-        ))}
+    <div className="w-full max-w-xl mx-auto flex flex-col items-center mb-12">
+      <Badge className="mt-0 mb-6 mx-auto text-gray-900 bg-gray-200 border border-gray-300">
+        Galeria dos nossos últimos trabalhos
+      </Badge>
+      <h2 className="text-3xl font-semibold lg:text-4xl mb-8 text-center">
+        Os nossos trabalhos
+      </h2>
+      <div className="bg-black rounded-xl shadow-xl border border-gray-700 p-8 flex flex-col justify-center text-white w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {images.map((image, index) => (
+            <div
+              key={image.src}
+              className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-105"
+              onClick={() => openLightbox(index)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="object-cover w-full h-full transition-opacity group-hover:opacity-80"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+            </div>
+          ))}
+        </div>
       </div>
       <Dialog open={selectedIndex !== null} onOpenChange={closeLightbox}>
         <DialogContent className="max-w-7xl w-full h-full max-h-[90vh] p-0 bg-black/95 border-none">
