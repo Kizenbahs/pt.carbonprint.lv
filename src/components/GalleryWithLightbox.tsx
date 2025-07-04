@@ -20,6 +20,10 @@ const images = [
   { src: "/img/3d-print-14.jpg", alt: "3D Print 14", title: "3D Print 14" },
   { src: "/img/3d-print-15.jpg", alt: "3D Print 15", title: "3D Print 15" },
   { src: "/img/3d-print-16.jpg", alt: "3D Print 16", title: "3D Print 16" },
+  { src: "/img/3d-print-17.jpg", alt: "3D Print 17", title: "3D Print 17" },
+  { src: "/img/3d-print-18.jpg", alt: "3D Print 18", title: "3D Print 18" },
+  { src: "/img/3d-print-19.jpg", alt: "3D Print 19", title: "3D Print 19" },
+  { src: "/img/3d-print-20.jpg", alt: "3D Print 20", title: "3D Print 20" },
 ];
 
 export default function GalleryWithLightbox() {
