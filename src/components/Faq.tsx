@@ -7,6 +7,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import GalleryWithLightbox from "./GalleryWithLightbox";
 
 interface FaqItem {
   id: string;
@@ -127,55 +128,8 @@ const Faq = ({
           </div>
 
           {/* Right Gallery Block */}
-          <div className="flex flex-col text-center">
-            <Badge className="mb-6 mt-0 mx-auto text-gray-900 bg-gray-200 border border-gray-300">
-            Galeria dos nossos últimos trabalhos
-            </Badge>
-            <h2 className="mb-3 mt-0 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
-              Os nossos trabalhos
-            </h2>
-            <div className="w-full">
-              <div className="bg-black rounded-xl shadow-xl border border-gray-700 p-10 flex flex-col justify-center text-white w-full">
-                <div className="grid grid-cols-3 gap-3 h-full">
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-01.jpg" alt="3D Print 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-02.jpg" alt="3D Print 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-03.jpg" alt="3D Print 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-04.jpg" alt="3D Print 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-05.jpg" alt="3D Print 5" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-06.jpg" alt="3D Print 6" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-07.jpg" alt="3D Print 7" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-08.jpg" alt="3D Print 8" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-09.jpg" alt="3D Print 9" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-10.jpg" alt="3D Print 10" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-11.jpg" alt="3D Print 11" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                    <img src="/img/3d-print-12.jpg" alt="3D Print 12" className="w-full h-full object-cover hover:scale-105 transition-transform duration-200" />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-col">
+            <GalleryWithLightbox />
           </div>
         </div>
       </div>
