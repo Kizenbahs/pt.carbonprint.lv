@@ -20,7 +20,7 @@ const Index = () => {
             url: "#contact"
           },
           secondary: {
-            text: "Pedir orçamento",
+            text: "Por que nós",
             url: "#faq"
           }
         }}
