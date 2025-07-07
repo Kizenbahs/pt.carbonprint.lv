@@ -104,22 +104,6 @@ const Navbar = () => {
               carbonprint
             </span>
           </a>
-          
-          {/* Etsy Shop Button */}
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className="bg-[#F56400] hover:bg-[#D55400] text-white border-[#F56400] hover:border-[#D55400] font-medium transition-colors duration-200"
-          >
-            <a
-              href="https://www.etsy.com/shop/carbonprintlv"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Etsy Shop
-            </a>
-          </Button>
         </nav>
       </div>
     </section>
