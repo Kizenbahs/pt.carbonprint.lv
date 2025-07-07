@@ -90,7 +90,7 @@ const Navbar = () => {
   return (
     <section className="py-8 bg-black">
       <div className="container mx-auto lg:px-16">
-        <nav className="flex items-center justify-center lg:justify-start">
+        <nav className="flex items-center justify-between">
           <a
             href="https://pt.carbonprint.lv/"
             className="flex items-center gap-2"
@@ -104,6 +104,21 @@ const Navbar = () => {
               carbonprint
             </span>
           </a>
+          
+          {/* Etsy Shop Button */}
+          <Button
+            asChild
+            variant="outline"
+            className="bg-orange-600 hover:bg-orange-700 text-white border-orange-600 hover:border-orange-700"
+          >
+            <a
+              href="https://www.etsy.com/shop/carbonprintlv"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Etsy Shop
+            </a>
+          </Button>
         </nav>
       </div>
     </section>
