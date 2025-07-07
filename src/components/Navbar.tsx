@@ -109,7 +109,8 @@ const Navbar = () => {
           <Button
             asChild
             variant="outline"
-            className="bg-[#F56400] hover:bg-[#D55400] text-white border-[#F56400] hover:border-[#D55400] font-medium px-6 py-2 rounded-md transition-colors duration-200"
+            size="sm"
+            className="bg-[#F56400] hover:bg-[#D55400] text-white border-[#F56400] hover:border-[#D55400] font-medium transition-colors duration-200"
           >
             <a
               href="https://www.etsy.com/shop/carbonprintlv"
