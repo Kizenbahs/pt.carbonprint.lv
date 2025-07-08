@@ -91,18 +91,28 @@ const Navbar = () => {
     <section className="py-8 bg-black">
       <div className="container mx-auto lg:px-16">
         <nav className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <a
+              href="https://pt.carbonprint.lv/"
+              className="flex items-center gap-2"
+            >
+              <img
+                src="/img/3d-print-logo.png"
+                className="max-h-8"
+                alt="3d printing"
+              />
+              <span className="text-xl font-semibold tracking-tighter">
+                carbonprint
+              </span>
+            </a>
+          </div>
           <a
-            href="https://pt.carbonprint.lv/"
-            className="flex items-center gap-2"
+            href="https://www.etsy.com/shop/CarbonPrintLV?dd_referrer=https%3A%2F%2Fcarbonprint.lv%2F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-200"
           >
-            <img
-              src="/img/3d-print-logo.png"
-              className="max-h-8"
-              alt="3d printing"
-            />
-            <span className="text-xl font-semibold tracking-tighter">
-              carbonprint
-            </span>
+            Etsy Shop
           </a>
         </nav>
       </div>
