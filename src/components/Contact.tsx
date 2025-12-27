@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import emailjs from '@emailjs/browser';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,11 +25,6 @@ const Contact = ({
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  // EmailJS configuration from environment variables
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -44,31 +38,33 @@ const Contact = ({
     setIsLoading(true);
     setError('');
 
-    // Check if environment variables are configured
-    if (!serviceId || !templateId || !publicKey) {
-      setError('Configuração de email não encontrada. Por favor, configure as variáveis de ambiente.');
-      setIsLoading(false);
-      return;
-    }
-
     try {
-      const templateParams = {
-        from_name: formData.firstname,
-        from_email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        to_name: 'carbonprint',
-      };
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.firstname,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
+
       setIsSuccess(true);
       setFormData({ firstname: '', email: '', phone: '', message: '' });
       
       // Reset success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('Resend error:', error);
       setError('Erro ao enviar mensagem. Tente novamente ou contacte-nos pelo WhatsApp.');
     } finally {
       setIsLoading(false);
