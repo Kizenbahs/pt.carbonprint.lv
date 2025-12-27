@@ -9,7 +9,8 @@ const sobreNosPosts = [
     title: "Serviço Personalizado",
     summary:
       "Oferecemos um serviço de impressão 3D de alta qualidade, com uma abordagem personalizada para cada projeto. Aconselhamos sobre melhorias nos ficheiros e otimização dos parâmetros de impressão para garantir uma produção mais rápida, custos mais baixos e peças mais fortes e duráveis.",
-    image: "/img/3d-print-16.jpg",
+    // Use the requested image for the Serviço Personalizado card
+    image: "/img/gennaker-spinnaker-furler-01.webp",
   },
   {
     id: "sobre-2",

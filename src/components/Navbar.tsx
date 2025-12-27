@@ -107,12 +107,12 @@ const Navbar = () => {
             </a>
           </div>
           <a
-            href="https://www.etsy.com/shop/CarbonPrintLV?dd_referrer=https%3A%2F%2Fcarbonprint.lv%2F"
+            href="https://www.ebay.com/sch/i.html?item=406520737458&rt=nc&_trksid=p4429486.m3561.l161211&_ssn=carbonprint.lv"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-200"
           >
-            Etsy Shop
+            Ebay
           </a>
         </nav>
       </div>
