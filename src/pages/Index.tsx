@@ -12,7 +12,7 @@ const Index = () => {
       <Navbar />
       <Hero 
         badge="✨ Bem-vindo ao mundo da impressão 3D"
-        heading="Impressão 3D e Design de Alta Performance"
+        heading="We make AI physical"
         description="Impressão em nylon de carbono e serviços personalizados de design 3D para profissionais, entusiastas e empresas"
         buttons={{
           primary: {
