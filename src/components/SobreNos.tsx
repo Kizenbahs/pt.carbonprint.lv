@@ -23,7 +23,7 @@ const sobreNosPosts = [
     title: "Experiência e Qualidade",
     summary:
       "A qualidade dos nossos serviços é sustentada por mais de 15 anos de experiência em metalomecânica, programação e operação de máquinas CNC. Esta experiência permite-nos compreender plenamente as necessidades dos nossos clientes e oferecer soluções práticas e tecnicamente bem fundamentadas.",
-    image: "/img/3d-print-15.jpg",
+    image: "/img/3d-print-28-01-2026.webp",
   },
   {
     id: "sobre-4",
