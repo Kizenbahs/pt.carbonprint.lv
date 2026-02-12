@@ -11,22 +11,22 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero 
-        badge="🏆 Laipni lūdzam 3D drukas pasaulē"
+        badge="✨ Bem-vindo ao mundo da impressão 3D"
         heading="We make AI physical"
-        description="Izturīga oglekļa neilona druka un pielāgoti 3D dizaina pakalpojumi profesionāļiem, entuziastiem un uzņēmumiem"
+        description="Impressão em nylon de carbono e serviços personalizados de design 3D para profissionais, entusiastas e empresas"
         buttons={{
           primary: {
-            text: "Sazinies ar mums",
-            url: "#contact",
+            text: "Contacte-nos",
+            url: "#contact"
           },
           secondary: {
-            text: "Kāpēc mēs",
-            url: "#faq",
-          },
+            text: "Por que nós",
+            url: "#faq"
+          }
         }}
         video={{
-          youtubeId: "NO9clg6l_M8",
-          title: "YouTube video player",
+        youtubeId: "NO9clg6l_M8",
+        title: "YouTube video player"
         }}
         primaryButtonClassName="bg-[#f3b112] hover:bg-[#e0a20f] text-black border-none"
       />

@@ -25,21 +25,21 @@ interface Hero1Props {
 }
 
 const Hero = ({
-  badge = "🏆 Laipni lūdzam 3D drukas pasaulē",
-  heading = "We make AI physical",
-  description = "Izturīga oglekļa neilona druka un pielāgoti 3D dizaina pakalpojumi profesionāļiem, entuziastiem un uzņēmumiem",
+  badge = "✨ Bem-vindo ao mundo da impressão 3D",
+  heading = "Build Beautiful Apps with Shadcn & Tailwind",
+  description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project to create stunning applications.",
   buttons = {
     primary: {
-      text: "Sazinies ar mums",
-      url: "#contact",
+      text: "Contacte-nos",
+      url: "#",
     },
     secondary: {
-      text: "Kāpēc mēs",
-      url: "#faq",
+      text: "View Documentation",
+      url: "#",
     },
   },
   video = {
-    youtubeId: "NO9clg6l_M8",
+    youtubeId: "MAFuVi_Zgyw",
     title: "YouTube video player",
   },
   primaryButtonClassName,
